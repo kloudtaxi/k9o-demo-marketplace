@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "spacegrey",
+		"workbench.preferredLightColorTheme": "Ultimate White",
+		"workbench.preferredDarkColorTheme": "Simple Focus",
+		"workbench.editor.highlightModifiedTabs": true,
+		"workbench.editor.tabSizing": "shrink",
+		"workbench.editor.wrapTabs": true,
+		"zenMode.hideLineNumbers": false,
+		"window.closeWhenEmpty": true,
+		"explorer.compactFolders": false,
+		"debug.allowBreakpointsEverywhere": true
+	}
+}
