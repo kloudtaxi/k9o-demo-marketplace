@@ -6,7 +6,7 @@
 	],
 	"settings": {
 		"workbench.colorTheme": "spacegrey",
-		"workbench.preferredLightColorTheme": "Ultimate White",
+		"workbench.preferredLightColorTheme": "spacegrey",
 		"workbench.preferredDarkColorTheme": "Simple Focus",
 		"workbench.editor.highlightModifiedTabs": true,
 		"workbench.editor.tabSizing": "shrink",

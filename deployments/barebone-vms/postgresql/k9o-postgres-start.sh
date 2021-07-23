@@ -3,7 +3,7 @@ echo '===== Creating PostgreSQL databases and users ====='
 # su - postgres
 
 # Update pg_hba.conf to trust local peer connection
-#sed -i  '/^local   all             all  peer/ s/peer/trust/' /etc/postgresql/13/main/pg_hba.conf
+sed -i  '/^local   all             all  trust/ s/peer/trust/' /etc/postgresql/13/main/pg_hba.conf
 cat /etc/postgresql/13/main/pg_hba.conf
 
 # Restart Postgres to udpate conf
@@ -18,5 +18,5 @@ sudo -u postgres psql -c "CREATE USER kumademo WITH SUPERUSER CREATEDB ENCRYPTED
 sudo -u postgres createdb kumademo
 
 # Restore PostgreSQL data from dump file
-sudo -u postgres psql -U kumademo -d kumademo -f database.sql
+psql -U kumademo -d kumademo -f k9o-database-restore.sql
 # psql -U kumademo -d kumademo -f database.sql
