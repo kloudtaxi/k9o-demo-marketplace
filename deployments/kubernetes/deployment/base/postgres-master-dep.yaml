@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-master
+  namespace: k9o-demo
+  labels:
+    app: postgres
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: master
+        image: kvn0218/postgres:latest
+        env:
+        - name: POSTGRES_USER
+          value: kumademo
+        - name: POSTGRES_PASSWORD
+          value: kumademo
+        - name: POSTGRES_DB
+          value: kumademo
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 150m
+            memory: 256Mi
+        ports:
+        - containerPort: 5432

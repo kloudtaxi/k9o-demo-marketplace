@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: k9o-demo
+  namespace: k9o-demo
+  annotations:
+    kuma.io/sidecar-injection: enabled

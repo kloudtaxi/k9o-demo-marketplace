@@ -1,0 +1,18 @@
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: ingress-kuma-marketplace-demo
+  namespace: k9o-demo
+  labels:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: k9odemoapp.harnessthe.cloud
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              serviceName: frontend
+              servicePort: http

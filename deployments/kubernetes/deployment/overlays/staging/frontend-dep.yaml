@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k9o-demo-app
+  namespace: k9o-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k9o-demo-frontend
+      version: v8
+      env: prod
+  template:
+    metadata:
+      labels:
+        app: k9o-demo-frontend
+        version: v8
+        env: prod
+    spec:
+      containers:
+      - name: kuma-fe
+        image: kloudtaxi/k9o-demo-fe:latest
+        args: ["-P", "http://backend:3001"]
+        imagePullPolicy: IfNotPresent

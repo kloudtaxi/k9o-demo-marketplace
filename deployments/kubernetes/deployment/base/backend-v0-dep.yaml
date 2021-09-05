@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k9o-demo-backend-v0
+  namespace: k9o-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k9o-demo-backend
+      version: v0
+      env: prod
+  template:
+    metadata:
+      labels:
+        app: k9o-demo-backend
+        version: v0
+        env: prod
+    spec:
+      containers:
+      - image: kvn0218/kuma-demo-be:latest
+        name: kuma-be
+        env:
+        - name: POSTGRES_HOST
+          value: postgres
+        - name: SPECIAL_OFFER
+          value: "false"
+        - name: REDIS_HOST
+          value: redis
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3001
