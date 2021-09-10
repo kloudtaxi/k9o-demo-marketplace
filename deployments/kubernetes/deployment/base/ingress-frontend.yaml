@@ -1,14 +1,14 @@
 kind: Ingress
 apiVersion: extensions/v1beta1
 metadata:
-  name: ingress-kuma-marketplace-demo
+  name: ingress-k9o-mp-demo-demo
   namespace: k9o-demo
   labels:
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    - host: k9odemoapp.harnessthe.cloud
+    - host: k9odemo.simplecloudmachines.com
       http:
         paths:
           - path: /
