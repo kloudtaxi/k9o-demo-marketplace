@@ -270,11 +270,11 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
   labels: null
-  name: ingress-kuma-marketplace-demo
+  name: ingress-k9o-mp-demo
   namespace: k9o-demo
 spec:
   rules:
-  - host: k9odemoapp.harnessthe.cloud
+  - host: k9odemoapp.simplecloudmachines.com
     http:
       paths:
       - backend:
