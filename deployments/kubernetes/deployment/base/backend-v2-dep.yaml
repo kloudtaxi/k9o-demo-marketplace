@@ -19,6 +19,13 @@ spec:
     spec:
       containers:
       - image: kvn0218/kuma-demo-be:latest
+        resources:
+         requests:
+          cpu: 15m
+          memory: 105M
+         limits:
+          cpu: 15m
+          memory: 105M
         name: kuma-be
         env:
         - name: POSTGRES_HOST

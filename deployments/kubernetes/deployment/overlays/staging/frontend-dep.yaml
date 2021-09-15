@@ -19,6 +19,13 @@ spec:
     spec:
       containers:
       - name: kuma-fe
+        resources:
+         requests:
+          cpu: 15m
+          memory: 105M
+         limits:
+          cpu: 15m
+          memory: 105M
         image: kloudtaxi/k9o-demo-fe:latest
         args: ["-P", "http://backend:3001"]
         imagePullPolicy: IfNotPresent

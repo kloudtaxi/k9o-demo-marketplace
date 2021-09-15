@@ -22,3 +22,11 @@ spec:
         image: kvn0218/kuma-demo-fe:latest
         args: ["-P", "http://backend:3001"]
         imagePullPolicy: IfNotPresent
+        resources:
+         requests:
+          cpu: 15m
+          memory: 105M
+         limits:
+          cpu: 15m
+          memory: 105M
+        
