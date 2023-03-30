@@ -1,7 +1,7 @@
 # docker build . -t kvn0218/postgres:latest
 # docker push kvn0218/postgres:latest
 
-FROM postgres:alpine
+FROM postgres:15-alpine3.17
 
 RUN mkdir -p /tmp/psql_data/
 
